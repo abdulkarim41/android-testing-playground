@@ -1,6 +1,5 @@
 package com.abdulkarim.android_testing_playground.domain
 
-import com.abdulkarim.android_testing_playground.data.Product
 import io.mockk.coEvery
 import io.mockk.mockk
 import junit.framework.TestCase.assertEquals
@@ -14,12 +13,12 @@ class GetProductsUseCaseTest {
 
     @Test
     fun `should return product list`() = runTest {
-        val products = listOf(Product(1, "Phone"), Product(2, "Tablet"))
-        coEvery { repository.getProducts() } returns products
+        val productApiEntities = listOf(ProductApiEntity(1, "Phone"), ProductApiEntity(2, "Tablet"))
+        coEvery { repository.getProducts() } returns productApiEntities
 
         val result = useCase()
 
-        assertEquals(products, result)
+        assertEquals(productApiEntities, result)
         assertEquals(2, result.size)
     }
 }
