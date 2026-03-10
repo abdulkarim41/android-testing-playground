@@ -63,3 +63,7 @@ dependencies {
     testImplementation(libs.turbine)
 
 }
+
+tasks.withType<Test> {
+    jvmArgs = jvmArgs + "-XX:+EnableDynamicAgentLoading"
+}
