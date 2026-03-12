@@ -16,7 +16,6 @@ import javax.inject.Inject
 @HiltViewModel
 class ProductViewModel @Inject constructor(
     private val getProductsUseCase: GetProductsUseCase,
-    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : ViewModel() {
 
     val action: (ProductListUiAction) -> Unit = {
@@ -31,7 +30,7 @@ class ProductViewModel @Inject constructor(
     init { fetchProductListApi() }
 
     private fun fetchProductListApi() {
-        viewModelScope.launch(dispatcher) {
+        viewModelScope.launch() {
             getProductsUseCase().collect { result ->
                 when (result) {
                     is Result.Success -> {

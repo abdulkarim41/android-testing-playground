@@ -6,6 +6,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import com.abdulkarim.android_testing_playground.common.Result
+import com.abdulkarim.android_testing_playground.di.qualifier.IoDispatcher
 import com.google.gson.JsonParser
 import kotlinx.coroutines.flow.flowOn
 import okhttp3.ResponseBody
@@ -16,7 +17,7 @@ import java.net.SocketTimeoutException
 import kotlin.text.ifEmpty
 
 class NetworkBoundResource @Inject constructor(
-    private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
+    @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) {
     fun<ResultType> fetchData(api : suspend () -> Response<ResultType>): Flow<Result<ResultType>> {
         return flow {
