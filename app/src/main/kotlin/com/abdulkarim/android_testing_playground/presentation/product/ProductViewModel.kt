@@ -1,4 +1,4 @@
-package com.abdulkarim.android_testing_playground.presentation
+package com.abdulkarim.android_testing_playground.presentation.product
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -6,8 +6,6 @@ import com.abdulkarim.android_testing_playground.domain.usecase.GetProductsUseCa
 import com.abdulkarim.android_testing_playground.domain.model.ProductApiEntity
 import com.abdulkarim.android_testing_playground.common.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

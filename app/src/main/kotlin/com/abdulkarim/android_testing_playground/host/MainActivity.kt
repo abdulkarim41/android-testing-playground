@@ -1,4 +1,4 @@
-package com.abdulkarim.android_testing_playground
+package com.abdulkarim.android_testing_playground.host
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -6,9 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
+import com.abdulkarim.android_testing_playground.R
 import com.abdulkarim.android_testing_playground.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import kotlin.getValue
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

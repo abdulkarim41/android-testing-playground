@@ -1,4 +1,4 @@
-package com.abdulkarim.android_testing_playground.presentation
+package com.abdulkarim.android_testing_playground.presentation.login
 
 import android.os.Bundle
 import android.view.View
@@ -20,7 +20,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         _binding = FragmentLoginBinding.bind(view)
 
         binding.loginBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_navigate_to_homeFragment)
+            findNavController().navigate(R.id.action_navigate_to_productFragment)
         }
 
     }
