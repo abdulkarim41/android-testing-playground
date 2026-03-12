@@ -1,5 +1,6 @@
 package com.abdulkarim.android_testing_playground.data
 
+import com.abdulkarim.android_testing_playground.data.apiservice.ProductApiService
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.test.runTest
 import okhttp3.mockwebserver.MockResponse
