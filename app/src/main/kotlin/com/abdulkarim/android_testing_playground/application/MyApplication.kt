@@ -1,4 +1,4 @@
-package com.abdulkarim.android_testing_playground
+package com.abdulkarim.android_testing_playground.application
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
