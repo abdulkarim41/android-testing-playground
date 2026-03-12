@@ -1,6 +1,6 @@
-package com.abdulkarim.android_testing_playground.data
+package com.abdulkarim.android_testing_playground.data.model
 
-import com.abdulkarim.android_testing_playground.domain.ProductApiEntity
+import com.abdulkarim.android_testing_playground.domain.model.ProductApiEntity
 
 data class ProductApiResponse(
     val id: Int,

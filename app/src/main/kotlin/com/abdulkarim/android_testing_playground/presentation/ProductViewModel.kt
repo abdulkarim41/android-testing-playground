@@ -2,8 +2,8 @@ package com.abdulkarim.android_testing_playground.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.abdulkarim.android_testing_playground.domain.GetProductsUseCase
-import com.abdulkarim.android_testing_playground.domain.ProductApiEntity
+import com.abdulkarim.android_testing_playground.domain.usecase.GetProductsUseCase
+import com.abdulkarim.android_testing_playground.domain.model.ProductApiEntity
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

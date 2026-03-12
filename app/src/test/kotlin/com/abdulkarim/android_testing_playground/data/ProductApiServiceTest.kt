@@ -1,5 +1,6 @@
 package com.abdulkarim.android_testing_playground.data
 
+import com.abdulkarim.android_testing_playground.data.apiservice.ProductApiService
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.test.runTest
 import okhttp3.mockwebserver.MockResponse
@@ -10,7 +11,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import kotlin.jvm.java
 
-class ProductApiTest {
+class ProductApiServiceTest {
 
     private lateinit var api: ProductApiService
     private lateinit var mockWebServer: MockWebServer

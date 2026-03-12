@@ -1,5 +1,8 @@
 package com.abdulkarim.android_testing_playground.domain
 
+import com.abdulkarim.android_testing_playground.domain.model.ProductApiEntity
+import com.abdulkarim.android_testing_playground.domain.repository.ProductRepository
+import com.abdulkarim.android_testing_playground.domain.usecase.GetProductsUseCase
 import io.mockk.coEvery
 import io.mockk.mockk
 import junit.framework.TestCase.assertEquals
