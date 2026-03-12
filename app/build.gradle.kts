@@ -35,6 +35,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -64,6 +67,11 @@ dependencies {
     // Hilt
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+
+    // Navigation
+    implementation(libs.androidx.navigation.ui)
+    implementation(libs.androidx.navigation.ktx)
+    implementation(libs.androidx.navigation.hilt)
 
     // Test dependencies (unit tests)
     testImplementation(libs.junit)
