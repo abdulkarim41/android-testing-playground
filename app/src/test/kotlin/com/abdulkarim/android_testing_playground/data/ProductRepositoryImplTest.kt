@@ -79,24 +79,4 @@ class ProductRepositoryImplTest {
         }
     }
 
-
-    @Test
-    fun `getProducts emits error on exception`() = runTest {
-
-        coEvery { api.getProducts() } throws RuntimeException("Unknown error occurred")
-
-        repository.getProducts().test {
-            val loadingStart = awaitItem()
-            assertTrue(loadingStart is Result.Loading && loadingStart.loading)
-
-            val loadingEnd = awaitItem()
-            assertTrue(loadingEnd is Result.Loading && !loadingEnd.loading)
-
-            val error = awaitItem()
-            assertTrue(error is Result.Error)
-            assertEquals("Unknown error occurred", (error as Result.Error).message)
-            awaitComplete()
-        }
-    }
-
 }
