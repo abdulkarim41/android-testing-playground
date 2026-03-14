@@ -25,3 +25,9 @@ jobs:
 
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
+
+      - name: Publish Test Results
+        uses: mikepenz/action-junit-report@v4
+        if: always()
+        with:
+         report_paths: app/build/test-results/testDebugUnitTest/*.xml
